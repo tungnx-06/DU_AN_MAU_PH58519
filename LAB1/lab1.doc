@@ -1,19 +1,14 @@
 Bài 1: Đặt vấn đề
-PolyShop là một nền tảng thương mại điện tử với giao diện thân thiện, tập trung vào việc trưng
-bày và giới thiệu sản phẩm. Hệ thống cho phép người dùng tạo tài khoản cá nhân, duyệt danh
-mục sản phẩm, sử dụng tìm kiếm nâng cao với nhiều bộ lọc, và xem thông tin chi tiết sản phẩm
-bao gồm hình ảnh chất lượng cao, mô tả, thông số kỹ thuật và giá cả. Người dùng có thể bình
-luận trực tiếp về sản phẩm để chia sẻ ý kiến và đánh giá, tạo nên cộng đồng người dùng tương
-tác giúp khách hàng tiềm năng có thêm thông tin tham khảo.
-Về phía quản trị, PolyShop cung cấp bảng điều khiển cho phép quản lý sản phẩm (thêm, sửa, xóa),
-quản lý danh mục và điều chỉnh giá cả. Hệ thống cũng bao gồm công cụ quản lý khuyến mãi, mã
-giảm giá và theo dõi kho hàng với chức năng cảnh báo khi sắp hết hàng. Quản trị viên có thể kiểm
-duyệt bình luận của người dùng để đảm bảo nội dung phù hợp và xây dựng môi trường trao đổi
-lành mạnh.
-Về mặt kỹ thuật, PolyShop được xây dựng với tính năng bảo mật cao, đảm bảo an toàn cho dữ
-liệu người dùng. Giao diện đáp ứng (responsive) cho phép truy cập tốt trên nhiều thiết bị khác
-nhau, từ máy tính để bàn đến điện thoại di động. Hệ thống được tối ưu hóa cho tốc độ tải trang
-nhanh và tuân thủ các nguyên tắc SEO để tăng khả năng hiển thị trên các công cụ tìm kiếm, giúp
-thu hút nhiều khách truy cập hơn.
+Người dùng:
+• Đăng ký/Đăng nhập tài khoản
+• Tìm kiếm sản phẩm
+• Xem chi tiết sản phẩm
+• Bình luận và đánh giá sản phẩm
+Quản trị viên:
+• Quản lý sản phẩm
+• Quản lý danh mục
+• Quản lý khuyến mãi
+• Quản lý tài khoản
+• Kiểm duyệt bình luận của người dùng
 
 Bài 2: Vẽ USE CASE
