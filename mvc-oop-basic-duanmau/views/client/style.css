@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+img{
+    max-width: 100%;
+}
+.flex{
+    display: flex;
+}
+header .flex{
+    justify-content: space-between;
+}
+nav a{
+    padding: 20px 30px;
+    display: block;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+}
+footer .col{
+    flex-basis: 20%;
+}

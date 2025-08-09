@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="views/client/style.css" type="text/css">
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container flex">
         <div id="logo">
             NGoxuantung
         </div>
         <nav>
-            <ul>
+            <ul class="flex">
                 <li>
                     <a href="#">Trang chủ</a>
                 </li>
