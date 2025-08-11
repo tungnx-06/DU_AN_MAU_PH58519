@@ -14,7 +14,8 @@ class CategoryController
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             // print_r($_POST);
            $id =  $this->modelCategory->Add($_POST);
-           echo "id vua them la $id";
+        //    echo "id vua them la $id";
+        header("Location: ?mode=admin&act=category");
         }else{
 
         

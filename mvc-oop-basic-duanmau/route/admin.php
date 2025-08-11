@@ -11,7 +11,7 @@ if(isset($_SESSION['user'])){
     'addcategory'=>(new CategoryController())->addCategory(),
     'category'=>(new CategoryController())->Viewcat(),
     'addproduct'=>(new ProductController())->addProduct(),
-    'deletecat' => (new CategoryController())->delete(),
+    'delete' => (new CategoryController())->delete(),
     'delete' => (new ProductController())->delete(),
     default => (new HomeController())->index(),
     'product'=>(new ProductController())->ViewPro(),

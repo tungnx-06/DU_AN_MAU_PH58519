@@ -27,7 +27,7 @@ require_once 'header.php';
                         <td><?= $type ?></td>
                         <td>
                             <a href="">Sua</a>
-                            <a href="?mode=admin&act=deletecat&id=<?= $key+1 ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xoa</a>
+                            <a href="?mode=admin&act=delete&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xoa</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

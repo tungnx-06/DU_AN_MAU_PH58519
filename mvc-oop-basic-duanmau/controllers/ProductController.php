@@ -27,7 +27,8 @@ class ProductController
             "image" => $path
         ];
            $id = $this->modelProduct->AddProduct($data);
-           echo "san pham vua them la: $id";
+        //    echo "san pham vua them la: $id";
+        header("Location: ?mode=admin&act=product");
         }else{
 
         

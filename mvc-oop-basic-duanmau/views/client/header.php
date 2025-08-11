@@ -156,7 +156,7 @@ footer .col {
                     <a href="#">Liên hệ</a>
                 </li>
                 <li>
-                    <a href="?act=logout">Dang xuat</a>
+                    <a href="?act=logout" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không?')">Dang xuat</a>
                 </li>
             </ul>
         </nav>

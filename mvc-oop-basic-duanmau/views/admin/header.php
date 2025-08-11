@@ -179,7 +179,7 @@ button:hover {
                         <a href="#">HELLO ADMIN</a>
                     </li>
                     <li>
-                        <a href="?act=logout">Logout</a>
+                        <a href="?act=logout" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không?')">Logout</a>
                     </li>
                 </ul>
             </nav>
