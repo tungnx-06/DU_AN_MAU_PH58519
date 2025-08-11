@@ -7,6 +7,10 @@ $act = $_GET['act'] ?? '/';
 match ($act) {
     // Trang chủ
     '/'=>(new HomeController())->index(),
+    'register'=>(new UserController())->Register(),
+    'login'=>(new UserController())->Login(),
+    'logout'=> (new UserController())->Logout(),
+    default=>(new HomeController())->index(),
 
 };
 ?>

@@ -2,17 +2,50 @@
 // có class chứa các function thực thi xử lý logic 
 class ProductController
 {
+    public $modelCategory;
     public $modelProduct;
 
     public function __construct()
     {
+        $this->modelCategory = new CategoryModel();
         $this->modelProduct = new ProductModel();
     }
 
-    public function Home()
+    public function addProduct()
     {
-        $title = "Đây là trang chủ nhé hahaa";
-        $thoiTiet = "Hôm nay trời có vẻ là mưa";
-        require_once './views/trangchu.php';
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            // print_r($_FILES['image']);
+            $path = uploadFile($_FILES['image'],'uploads/imgproduct/');
+            // echo $path;
+            // print_r($_POST);
+            $data['image'] = $path;
+            $data = [
+            "name" => $_POST['name'] ?? '',
+            "price" => $_POST['price'] ?? 0,
+            "category_id" => $_POST['category_id'] ?? 0,
+            "description" => $_POST['description'] ?? '',
+            "image" => $path
+        ];
+           $id = $this->modelProduct->AddProduct($data);
+           echo "san pham vua them la: $id";
+        }else{
+
+        
+        $title ="them moi san pham";
+        $category = $this->modelCategory->getAllCategory(1);//lay ra danh sach danh muc co kieu san pham
+        // print_r($category);
+        require_once './views/admin/product/add.php';
+        }   
+    }
+    public function ViewPro(){
+        $title = "danh sach danh San Pham";
+        $result = $this->modelProduct->getAllProduct();
+        require_once './views/admin/product/listproduct.php';
+    }
+public function delete()
+    {
+        $id = $_GET['id'];
+        $this->modelProduct->delete($id);
+        header("Location: ?mode=admin&act=product");
     }
 }

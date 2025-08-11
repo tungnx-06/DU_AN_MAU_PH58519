@@ -1,6 +1,6 @@
 <?php 
 // Có class chứa các function thực thi tương tác với cơ sở dữ liệu 
-class ProductModel 
+class CategoryModel 
 {
     public $conn;
     public function __construct()
@@ -9,30 +9,35 @@ class ProductModel
     }
 
     // Viết truy vấn danh sách sản phẩm 
-    public function getAllProduct()
+    public function getAllCategory($type = null)
     {
-        $sql = "select * from product";
+        $sql = "select * from category";
+        if($type!==null){
+            $sql .=' where type = :type';
+        }
         $stmt = $this->conn->prepare($sql);
+        if($type!==null){
+        $stmt->execute([
+            "type"=>$type
+        ]);
+    }else{
         $stmt->execute();
+    }
         return $stmt->fetchAll();
     }
     // viet lenh luu data
-    public function AddProduct($data){
-        $sql = "insert into product(name,image,price,category_id,description) values (:name,:image,:price,:category_id,:description)";
+    public function Add($data){
+        $sql = "insert into category(name,type) values (:name,:type)";
         $stmt = $this->conn-> prepare($sql);
         $stmt->execute([
             "name"=>$data['name'],
-            "image"=>$data['image'],
-            "price"=>$data['price'],
-            "category_id"=>$data['category_id'],
-            "description"=>$data['description'],
-            
+            "type"=>$data['type'] ?? 0
         ]);
         return $this->conn->lastInsertId();
     }
-    public function delete($id)
+     public function delete($id)
     {
-        $sql = "DELETE FROM `product` WHERE `product`.`id` = :id";
+        $sql = "DELETE FROM `category` WHERE `category`.`id` = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
