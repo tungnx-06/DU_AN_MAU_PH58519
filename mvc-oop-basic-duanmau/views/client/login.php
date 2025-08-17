@@ -11,6 +11,10 @@
                 <input type="password" name="password" id="" placeholder="mat khau">
                 <button type="submit">Dang nhap</button>
             </form>
+            <?php if(!empty($error)) echo "<p class='error-message'>$error</p>"; ?>
+            <div class="register-link">
+                chua co tai khoan <a href="?act=register">Dang ki ngay</a>
+            </div>
         </div>
     </div>
 </main>

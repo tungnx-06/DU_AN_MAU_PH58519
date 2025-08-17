@@ -16,6 +16,13 @@ class ProductModel
         $stmt->execute();
         return $stmt->fetchAll();
     }
+    public function getAllProductById($id)
+    {
+        $sql = "select * from product where id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(array('id'=>$id));
+        return $stmt->fetch();
+    }
     // viet lenh luu data
     public function AddProduct($data){
         $sql = "insert into product(name,image,price,category_id,description) values (:name,:image,:price,:category_id,:description)";

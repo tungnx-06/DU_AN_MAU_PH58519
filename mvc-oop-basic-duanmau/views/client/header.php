@@ -130,6 +130,23 @@ footer .col {
 .login button:hover {
     background-color: #e68900;
 }
+img{
+    max-width: 100%;
+}
+.grid{
+    display: grid;
+    gap: 20px;
+}
+.gird-cols-4{
+    grid-template-columns: repeat(4,1fr);
+}
+.gird-cols-2{
+    grid-template-columns: repeat(2,1fr);
+}
+.productdetail{
+    margin: 30px 0;
+}
+
      </style>
 </head>
 <body>
@@ -156,7 +173,7 @@ footer .col {
                     <a href="#">Liên hệ</a>
                 </li>
                 <li>
-                    <a href="?act=logout" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không?')">Dang xuat</a>
+                    <a href="?act=logout" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không?')">Dang xuat/Dang nhap</a>
                 </li>
             </ul>
         </nav>

@@ -33,7 +33,7 @@ require_once __DIR__.'/../header.php';
                         <td><?= $value['description'] ?></td>
                         <td>
                             <a href="">Sua</a>
-                            <a href="?mode=admin&act=delete&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xoa</a>
+                            <a href="?mode=admin&act=deletete&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xoa</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

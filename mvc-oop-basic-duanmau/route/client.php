@@ -10,6 +10,7 @@ match ($act) {
     'register'=>(new UserController())->Register(),
     'login'=>(new UserController())->Login(),
     'logout'=> (new UserController())->Logout(),
+    'detail'=> (new ProductController())->ProductDetail(),
     default=>(new HomeController())->index(),
 
 };

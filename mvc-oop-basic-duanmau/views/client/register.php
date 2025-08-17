@@ -13,6 +13,10 @@
                 <input type="date" name="birth" id="" placeholder="ngay sinh">
                 <button type="submit">Dang Ki</button>
             </form>
+            <?php if(!empty($error)) echo "<p class='error-message'>$error</p>"; ?>
+            <div class="login-link">
+                da co tai khoan <a href="?act=login">Dang nhap ngay</a>
+            </div>
         </div>
     </div>
 </main>

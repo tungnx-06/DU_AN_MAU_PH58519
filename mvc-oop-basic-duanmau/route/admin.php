@@ -12,10 +12,10 @@ if(isset($_SESSION['user'])){
     'category'=>(new CategoryController())->Viewcat(),
     'addproduct'=>(new ProductController())->addProduct(),
     'delete' => (new CategoryController())->delete(),
-    'delete' => (new ProductController())->delete(),
-    default => (new HomeController())->index(),
+    'deletete' => (new ProductController())->delete(),
     'product'=>(new ProductController())->ViewPro(),
     'logout'    => (new UserController())->LogoutAdmin(),
+    default => (new HomeController())->index(),
 };
     }
 }

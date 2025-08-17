@@ -49,4 +49,24 @@ public function delete()
         $this->modelProduct->delete($id);
         header("Location: ?mode=admin&act=product");
     }
+    public function list() {
+    $products = $this->modelProduct->getAllProduct();
+    require_once "views/client/product/list.php";
+}
+public function ProductDetail(){
+    $id = $_GET['id']??0;
+    if($id>0){
+        $result = $this->modelProduct->getAllProductById($id);
+        if(empty($result)){
+            header('Location: /');
+        }else{
+            extract($result);
+            require_once './views/client/productDetail.php';
+        }
+        
+    }else{
+        header('Location: /');
+    }
+    
+}
 }
