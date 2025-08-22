@@ -16,6 +16,7 @@ require_once './controllers/DashboarbController.php';
 require_once './models/ProductModel.php';
 require_once './models/CategoryModel.php';
 require_once './models/UserModel.php';
+require_once './models/CartModel.php';
 
 // Route
 $mode = $_GET['mode'] ?? '/';

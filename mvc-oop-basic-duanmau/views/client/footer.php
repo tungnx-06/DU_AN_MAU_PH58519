@@ -1,3 +1,4 @@
+<?php require_once "cart.php";  ?>
 <footer>
     <div class="container flex">
         <div class="col"></div>

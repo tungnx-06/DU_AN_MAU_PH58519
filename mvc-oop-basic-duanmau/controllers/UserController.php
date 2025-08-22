@@ -35,7 +35,7 @@ class UserController
                 echo "Sai ten dang nhap hoac mat khau";
             }else{
                 print_r($result);
-                $user = array("username" => $result['username'],"role"=>$result['role'],"fullname"=>$result['fullname']);
+                $user = array("id"=>$result['id'],"username" => $result['username'],"role"=>$result['role'],"fullname"=>$result['fullname']);
                 $_SESSION['user'] = $user;
                 $_SESSION['user'] = $user;
 

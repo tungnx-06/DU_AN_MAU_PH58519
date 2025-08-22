@@ -146,6 +146,28 @@ img{
 .productdetail{
     margin: 30px 0;
 }
+#cart{
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    width: 350px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
+    height: 100%;
+    border: 1px solid #ccc;
+}
+#cart li{
+    display: flex;
+    margin-bottom: 10px;
+}
+#cart li img{
+    max-width: 50px;
+}
+#cart.active{
+    transform: translateX(0);
+}
 
      </style>
 </head>
@@ -153,12 +175,12 @@ img{
     <header>
         <div class="container flex">
         <div id="logo">
-            NGoxuantung
+            Yody
         </div>
         <nav>
             <ul class="flex">
                 <li>
-                    <a href="#">Trang chủ</a>
+                    <a href="index.php">Trang chủ</a>
                 </li>
                 <li>
                     <a href="#">Sản phẩm</a>

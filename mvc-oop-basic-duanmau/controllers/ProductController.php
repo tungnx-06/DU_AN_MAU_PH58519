@@ -4,11 +4,12 @@ class ProductController
 {
     public $modelCategory;
     public $modelProduct;
-
+    private $cartModel;
     public function __construct()
     {
         $this->modelCategory = new CategoryModel();
         $this->modelProduct = new ProductModel();
+        $this->cartModel = new CartModel();
     }
 
     public function addProduct()
@@ -68,5 +69,29 @@ public function ProductDetail(){
         header('Location: /');
     }
     
+}
+public function AddToCart(){
+    $userid = $_SESSION['user']['id']??0;
+     header('Content-type:appication/json');
+    if($userid==0){
+        $result = array(
+            "status"=>false,
+            "message"=>"ban can phai dang nhap"
+        );
+        echo json_encode($result);
+        return;
+    }
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $productid = $_POST['productid'];
+        $quantity = $_POST['quantity'];
+        $this->cartModel->addTocart($userid,$productid,$quantity);
+        $data = $this->cartModel->getAllProductIncart($userid);
+        $result = array(
+            "status"=>true,
+            "message"=>"them gio hang thanh cong",
+            "data"=>$data
+        );
+        echo json_encode($result);
+    }
 }
 }

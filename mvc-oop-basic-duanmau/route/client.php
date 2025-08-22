@@ -11,6 +11,7 @@ match ($act) {
     'login'=>(new UserController())->Login(),
     'logout'=> (new UserController())->Logout(),
     'detail'=> (new ProductController())->ProductDetail(),
+    'addtocart'=> (new ProductController())->AddToCart(),
     default=>(new HomeController())->index(),
 
 };
