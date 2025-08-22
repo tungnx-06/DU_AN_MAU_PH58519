@@ -66,7 +66,7 @@ public function LogoutAdmin()
 {
     session_unset();
     session_destroy();
-    header("Location: ?act=login"); // quay về trang login chung
+    header("Location: ?act=login"); 
     exit;
 }
 }

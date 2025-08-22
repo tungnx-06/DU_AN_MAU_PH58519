@@ -8,15 +8,6 @@ class UserModel
         $this->conn = connectDB();
     }
 
-    // Viết truy vấn danh sách sản phẩm 
-    // public function getAllProduct()
-    // {
-    //     $sql = "select * from product";
-    //     $stmt = $this->conn->prepare($sql);
-    //     $stmt->execute();
-    //     return $stmt->fetchAll();
-    // }
-    // // viet lenh luu data
     public function Register($data){
         $sql = "insert into user (username,password,fullname,birth) values (:username,:password,:fullname,:birth)";
         $stmt = $this->conn-> prepare($sql);
